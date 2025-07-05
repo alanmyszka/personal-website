@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+/* ustawienia i animacja nazwy */
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.name-container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Space Mono', monospace;
+    font-size: 7rem;
+    color: #242424;
+    margin-top: -4%;
+}
+.name-typing-animation {
+    width: 47.248rem;
+    animation: typing 2s steps(11), blink .4s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+/* ustawienia i animacja nazwy */
+/* ustawienia ikon */
+.icons-position {
+    position: absolute;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+.fb {
+    left: 35%;
+    filter: invert(10%) sepia(0%) saturate(1%) hue-rotate(159deg) brightness(98%) contrast(89%); /* nadanie koloru #242424 przy pomocy filter dla plików.png */
+}
+.li {
+    left: 50%;
+    filter: invert(10%) sepia(0%) saturate(1%) hue-rotate(159deg) brightness(98%) contrast(89%); /* nadanie koloru #242424 przy pomocy filter dla plików.png */
+}
+.ig {
+    left: 65%;
+    filter: invert(10%) sepia(0%) saturate(1%) hue-rotate(159deg) brightness(98%) contrast(89%); /* nadanie koloru #242424 przy pomocy filter dla plików.png */
+}
+a {
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+.transition-opacity a:hover {
+    opacity: 70%;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+/* ustawienia ikon */
+/* ustawienia stopki */
+.footer {
+    font-family: 'Space Mono', monospace;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 1rem;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    width: 100%;
+    background-color: #242424;
+    color: #ffffff;
+}
+.footer-no-text-decoration {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+.margin-left-30px {
+    margin-left: 30px;
+}
+.margin-right-30px {
+    margin-right: 30px;
+}
+/* ustawienia stopki */
+/* ustawienia dla mniejszych ekranów */
+@media (max-width: 1000px) {
+    .name-container {
+        font-size: 4rem;
+    }
+    .name-typing-animation {
+        width: 27rem;
+        animation: typing 2s steps(11), blink .4s step-end infinite alternate;
+    }
+    .fb {
+        left: 30%;
+    }
+    .ig {
+        left: 70%;
+    }
+    .fb img, .ig img, .li img {
+        width: 45px;
+    }
+    .footer {
+        font-size: 1rem;
+        height: 70px;
+        line-height: 70px;
+    }
+}
+@media (max-width: 450px) {
+    .name-container {
+        font-size: 2.5rem;
+    }
+    .name-typing-animation {
+        width: 16.874rem;
+        animation: typing 2s steps(11), blink .4s step-end infinite alternate;
+    }
+    .fb {
+        left: 20%;
+    }
+    .ig {
+        left: 80%;
+    }
+    .fb img, .ig img, .li img {
+        width: 37px;
+    }
+    .footer {
+        font-size: 0.8rem;
+        height: 70px;
+        line-height: 70px;
+    }
+    .margin-left-30px {
+        margin-left: 5px;
+    }
+    .margin-right-30px {
+        margin-right: 5px;
+    }
+}
+/* ustawienia dla mniejszych ekranów */
