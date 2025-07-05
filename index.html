@@ -10,35 +10,111 @@
 		<title>alan myszka</title>
 	</head>
 	<body>
-			<div class="name-container unselectable">
-				<p class="name-typing-animation">
-					alan myszka
-				</p>
-			</div>
-			<div class="fb transition-opacity icons-position unselectable">
-				<a class="transition-opacity" href="https://www.facebook.com/alantomyszka/">
-					<img src="img/facebook.png">
-				</a>
-			</div>
-			<div class="ig transition-opacity icons-position unselectable">
-				<a class="transition-opacity" href="https://www.instagram.com/alantomyszka/">
-					<img src="img/instagram.png">
-				</a>
-			</div>
-			<div class="li transition-opacity icons-position unselectable">
-				<a class="transition-opacity" href="https://www.linkedin.com/in/alanmyszka/">
-					<img src="img/linkedin.png">
-				</a>
-			</div>
-			<div class="footer unselectable">
-				<i class="fa-regular fa-copyright"></i> 
-				<a class="margin-right-30px footer-no-text-decoration">
-					2025 alan myszka 
-				</a>
-				|
-				<a class="margin-left-30px footer-no-text-decoration" href="mailto:mail@alanmyszka.pl">
-					<i class="fa-regular fa-envelope"></i> mail@alanmyszka.pl
-				</a>
-			</div>
+		<div class="page-container" id="pageContainer">
+			<section class="main-section" id="main">
+				<div class="name-container unselectable">
+					<p class="name-typing-animation">
+						alan myszka
+					</p>
+				</div>
+				<div class="fb transition-opacity icons-position unselectable">
+					<a class="transition-opacity" href="https://www.facebook.com/alantomyszka/">
+						<img src="img/facebook.png">
+					</a>
+				</div>
+				<div class="ig transition-opacity icons-position unselectable">
+					<a class="transition-opacity" href="https://www.instagram.com/alantomyszka/">
+						<img src="img/instagram.png">
+					</a>
+				</div>
+				<div class="li transition-opacity icons-position unselectable">
+					<a class="transition-opacity" href="https://www.linkedin.com/in/alanmyszka/">
+						<img src="img/linkedin.png">
+					</a>
+				</div>
+			</section>
+			<section class="about-section" id="about">
+				<div class="about-content">
+					<div class="about-text">
+						<h2>o mnie - todo</h2>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="footer unselectable">
+			<i class="fa-regular fa-copyright"></i> 
+			<a class="margin-right-30px footer-no-text-decoration">
+				2025 alan myszka 
+			</a>
+			|
+			<a class="margin-left-30px footer-no-text-decoration" href="mailto:mail@alanmyszka.pl">
+				<i class="fa-regular fa-envelope"></i> mail@alanmyszka.pl
+			</a>
+		</div>
+		<button class="floating-btn" id="aboutBtn" onclick="goToAbout()">o mnie</button>
+		<button class="up-arrow-btn" id="upBtn" onclick="goToMain()"><i class="fa-solid fa-arrow-up"></i></button>
+		<script>
+			let isOnAbout = false;
+			const pageContainer = document.getElementById('pageContainer');
+			const aboutBtn = document.getElementById('aboutBtn');
+			const upBtn = document.getElementById('upBtn');
+
+			function goToAbout() {
+				if (isOnAbout) return;
+				
+				isOnAbout = true;
+				document.body.classList.add('transitioning');
+				
+				pageContainer.classList.add('show-about');
+				
+				setTimeout(() => {
+					aboutBtn.classList.add('invisible')
+				}, 20);
+									
+				setTimeout(() => {
+					upBtn.classList.add('visible');
+				}, 300);
+
+				setTimeout(() => {
+					document.body.classList.remove('transitioning');
+				}, 1200);
+			}
+
+			function goToMain() {
+				if (!isOnAbout) return;
+				
+				isOnAbout = false;
+				document.body.classList.add('transitioning');
+				
+				upBtn.classList.remove('visible');
+				
+				setTimeout(() => {
+					aboutBtn.classList.remove('invisible');
+					aboutBtn.textContent = 'o mnie';
+				}, 700);
+					
+				setTimeout(() => {
+					pageContainer.classList.remove('show-about');
+				}, 150);
+				
+				setTimeout(() => {
+					document.body.classList.remove('transitioning');
+				}, 1200);
+			}
+
+			document.addEventListener('wheel', function(e) {
+				e.preventDefault();
+			}, { passive: false });
+
+			document.addEventListener('touchmove', function(e) {
+				e.preventDefault();
+			}, { passive: false });
+
+			document.addEventListener('keydown', function(e) {
+				if([32, 33, 34, 35, 36, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+					e.preventDefault();
+				}
+			}, false);
+		</script>
 	</body>
 </html>
