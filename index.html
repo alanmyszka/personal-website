@@ -6,6 +6,7 @@
 		<meta name="description" content="personal website">
 		<meta name="author" content="alanmyszka">
 		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="about.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<title>alan myszka</title>
 	</head>
@@ -33,10 +34,86 @@
 					</a>
 				</div>
 			</section>
-			<section class="about-section" id="about">
-				<div class="about-content">
-					<div class="about-text">
-						<h2>o mnie - todo</h2>
+			<section class="about-section">
+				<div class="about-container">
+					<div class="sidebar">
+						<div class="logo">
+							<h1>o mnie</h1>
+						</div>
+						<nav class="nav-menu">
+							<!-- <div class="nav-item active" onclick="showSection('about')">o mnie</div> -->
+							<div class="nav-item active" onclick="showSection('experience')">doświadczenie</div>
+							<div class="nav-item" onclick="showSection('projects')">projekty</div>
+							<div class="nav-item" onclick="showSection('contact')">kontakt</div>
+						</nav>
+					</div>
+					<div class="content-area">
+						<!-- <div class="content-section active" id="about">
+							<h2>o mnie</h2>
+							<div class="about-content">
+								<p>opis-todo</p>
+								<h3 style="margin-top: 40px; margin-bottom: 20px; color: #333;">moje umiejętności:</h3>
+								<div class="skills-grid">
+									<div class="skill-item">todo</div>
+								</div>
+							</div>
+						</div> -->
+						<div class="content-section active" id="experience">
+							<h2>doświadczenie</h2>
+							<div class="experience-item">
+								<div class="job-title">inżynier devops</div>
+								<div class="company">neuca s.a.</div>
+								<div class="date">2021 - obecnie</div>
+								<div class="description">
+									todo
+								</div>
+							</div>
+						</div>
+						<div class="content-section" id="projects">
+							<h2>projekty</h2>
+							<div class="project-item">
+								<div class="project-title">todo</div>
+								<div class="project-tech">todo</div>
+								<div class="project-description">
+									todo
+								</div>
+							</div>
+						</div>
+						<div class="content-section" id="contact">
+							<h2>kontakt</h2>
+							<div class="contact-info">
+								<div class="contact-item">
+									<div class="contact-icon">@</div>
+									<div>
+										<strong>email:</strong><br>
+										mail@alanmyszka.pl
+									</div>
+								</div>
+								<div class="contact-item">
+									<div class="contact-icon">📱</div>
+									<div>
+										<strong>telefon:</strong><br>
+										+48 123 456 789
+									</div>
+								</div>
+								<div class="contact-item">
+									<div class="contact-icon">🌐</div>
+									<div>
+										<strong>linkedin:</strong><br>
+										linkedin.com/in/alanmyszka/
+									</div>
+								</div>
+							</div>
+							<div style="margin-top: 40px;">
+								<h3 style="margin-bottom: 20px; color: #333;">zapraszam do kontaktu!</h3>
+								<p style="font-size: 1.1em; line-height: 1.6; color: #555;">
+									todo
+								</p>
+								<p style="font-size: 1.1em; line-height: 1.6; color: #555; margin-top: 20px;">
+									todo
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -53,68 +130,6 @@
 		</div>
 		<button class="floating-btn" id="aboutBtn" onclick="goToAbout()">o mnie</button>
 		<button class="up-arrow-btn" id="upBtn" onclick="goToMain()"><i class="fa-solid fa-arrow-up"></i></button>
-		<script>
-			let isOnAbout = false;
-			const pageContainer = document.getElementById('pageContainer');
-			const aboutBtn = document.getElementById('aboutBtn');
-			const upBtn = document.getElementById('upBtn');
-
-			function goToAbout() {
-				if (isOnAbout) return;
-				
-				isOnAbout = true;
-				document.body.classList.add('transitioning');
-				
-				pageContainer.classList.add('show-about');
-				
-				setTimeout(() => {
-					aboutBtn.classList.add('invisible')
-				}, 20);
-									
-				setTimeout(() => {
-					upBtn.classList.add('visible');
-				}, 300);
-
-				setTimeout(() => {
-					document.body.classList.remove('transitioning');
-				}, 1200);
-			}
-
-			function goToMain() {
-				if (!isOnAbout) return;
-				
-				isOnAbout = false;
-				document.body.classList.add('transitioning');
-				
-				upBtn.classList.remove('visible');
-				
-				setTimeout(() => {
-					aboutBtn.classList.remove('invisible');
-					aboutBtn.textContent = 'o mnie';
-				}, 700);
-					
-				setTimeout(() => {
-					pageContainer.classList.remove('show-about');
-				}, 150);
-				
-				setTimeout(() => {
-					document.body.classList.remove('transitioning');
-				}, 1200);
-			}
-
-			document.addEventListener('wheel', function(e) {
-				e.preventDefault();
-			}, { passive: false });
-
-			document.addEventListener('touchmove', function(e) {
-				e.preventDefault();
-			}, { passive: false });
-
-			document.addEventListener('keydown', function(e) {
-				if([32, 33, 34, 35, 36, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-					e.preventDefault();
-				}
-			}, false);
-		</script>
+		<script type="text/javascript" src="about.js"></script>
 	</body>
 </html>

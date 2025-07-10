@@ -1,0 +1,257 @@
+.about-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    background: #242424;
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-item {
+    padding: 15px 25px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(5px);
+}
+
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: white;
+    transform: translateX(10px);
+}
+
+.content-area {
+    flex: 1;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.content-section.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.content-section h2 {
+    color: #242424;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 300;
+    border-bottom: 3px solid #242424;
+    padding-bottom: 10px;
+}
+
+.experience-item {
+    background: #f8f9fa;
+    border-left: 4px solid #242424;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(7, 7, 7, 0.247);
+}
+
+.job-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #292929;
+    margin-bottom: 5px;
+}
+
+.company {
+    color: #242424;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.date {
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #495057;
+    line-height: 1.6;
+}
+
+.about-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.skill-item {
+    background: #292929;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.project-item {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    box-shadow: 0 5px 20px rgba(26, 26, 26, 0.1);
+    transform: translateY(-3px);
+}
+
+.project-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #292929;
+    margin-bottom: 10px;
+}
+
+.project-tech {
+    color: #242424;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #292929;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background: #292929;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        overflow-x: auto;
+        gap: 10px;
+    }
+    
+    .nav-item {
+        white-space: nowrap;
+    }
+    
+    .content-section {
+        padding: 20px;
+    }
+    
+    .content-section h2 {
+        font-size: 2em;
+    }
+}
