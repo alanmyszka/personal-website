@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@font-face {
+    font-family: 'Space Mono';
+    src: url('/fonts/SpaceMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --mono-font: 'Space Mono', monospace;
@@ -51,7 +57,19 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: #242424;
-    font-size: 1rem;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer svg {
+    width: 1em;
+    height: 1em;
+    fill: #ffffff;
+    margin-right: 0.5em;
 }
 
 a {
@@ -61,8 +79,13 @@ a {
 
 .socials {
     display: flex;
-    gap: 12rem;
-    font-size: 4rem;
+    gap: 2em;
+}
+
+.socials svg {
+    width: 0.6em;
+    height: 0.6em;
+    fill: #242424;
 }
 
 .typing-animation {
@@ -96,7 +119,11 @@ a {
 
     .socials {
         gap: 8rem;
-        font-size: 3rem;
+    }
+
+    .socials svg {
+        width: 0.8em;
+        height: 0.8em;
     }
 }
 
@@ -112,7 +139,11 @@ a {
 
     .socials {
         gap: 4rem;
-        font-size: 2rem;
         padding-top: 5vh;
+    }
+
+    .socials svg {
+        width: 0.8em;
+        height: 0.8em;
     }
 }
