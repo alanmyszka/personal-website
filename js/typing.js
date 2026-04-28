@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const speed = 100 + Math.random() * 80;
             setTimeout(type, speed);
+        } else {
+            el.classList.add("blink");
         }
-    }
+    };
 
     type();
 });

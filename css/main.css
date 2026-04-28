@@ -85,6 +85,9 @@ h1 {
 h1::after {
     content: "|";
     margin-left: 4px;
+}
+
+h1.blink::after {
     animation: blink 0.8s infinite;
 }
 
