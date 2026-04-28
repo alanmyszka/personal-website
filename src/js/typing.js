@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             el.classList.add("blink");
         }
-    };
+    }
 
     type();
 });
