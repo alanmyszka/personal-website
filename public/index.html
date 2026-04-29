@@ -7,7 +7,7 @@
   <link rel="icon" href="/favicon.ico?v=20260429" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>alan myszka</title>
-  <link rel="stylesheet" href="/css/main.min.css?v=20260429_v2" />
+  <link rel="stylesheet" href="/css/main.min.css?v=20260429_v3" />
 </head>
 
 <body>
@@ -62,7 +62,7 @@
   </button>
 
   <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal" id="modal-box">
+    <div class="modal" id="modal-info">
 
       <div id="modal-form-view">
         <div class="modal-header">
@@ -101,8 +101,8 @@
         </form>
       </div>
 
-      <div class="modal-success" id="modal-success">
-        <div class="modal-success-header">
+      <div class="modal-info" id="modal-success">
+        <div class="modal-info-header">
           <div></div>
           <button class="modal-close" id="modal-close-success" aria-label="Zamknij"><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -111,19 +111,38 @@
                 d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
             </svg></button>
         </div>
-        <div class="success-icon"><svg xmlns="http://www.w3.org/2000/svg"
+        <div class="modal-icon"><svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
             <path
               d="M434.8 70.1c14.3 10.4 17.5 30.4 7.1 44.7l-256 352c-5.5 7.6-14 12.3-23.4 13.1s-18.5-2.7-25.1-9.3l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l101.5 101.5 234-321.7c10.4-14.3 30.4-17.5 44.7-7.1z" />
           </svg></div>
-        <div class="success-title">wysłano</div>
-        <p class="success-text">dzięki za wiadomość - odezwę się wkrótce</p>
+        <div class="modal-title">wysłano</div>
+        <p class="modal-text">dzięki za wiadomość - odezwę się wkrótce</p>
+      </div>
+
+      <div class="modal-info" id="modal-error">
+        <div class="modal-info-header">
+          <div></div>
+          <button class="modal-close" id="modal-close-error" aria-label="Zamknij"><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
+            </svg></button>
+        </div>
+        <div class="modal-icon"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+            <path
+              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z" />
+          </svg></div>
+        <div class="modal-title">błąd</div>
+        <p class="modal-text">coś poszło nie tak - napisz bezpośrednio na mail@alanmyszka.pl</p>
       </div>
 
     </div>
   </div>
   <script src="/js/typing.min.js?v=20260429"></script>
-  <script src="/js/modal.min.js?v=20260429"></script>
+  <script src="/js/modal.min.js?v=20260429_v2"></script>
 </body>
 
 </html>

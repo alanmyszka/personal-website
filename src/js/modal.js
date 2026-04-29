@@ -1,6 +1,7 @@
 const overlay = document.getElementById('modal-overlay');
 const formView = document.getElementById('modal-form-view');
 const successView = document.getElementById('modal-success');
+const errorView = document.getElementById('modal-error');
 const form = document.getElementById('contact-form');
 const submitBtn = document.getElementById('submit-btn');
 const emailInput = document.getElementById('cf-email');
@@ -25,6 +26,7 @@ function resetModal() {
     form.reset();
     formView.style.display = '';
     successView.classList.remove('show');
+    errorView.classList.remove('show');
     submitBtn.disabled = false;
     submitBtn.textContent = 'wyślij wiadomość';
 }
@@ -35,6 +37,7 @@ document.getElementById('fab').addEventListener('click', () => {
 });
 
 document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-close-error').addEventListener('click', closeModal);
 document.getElementById('modal-close-success').addEventListener('click', closeModal);
 
 overlay.addEventListener('click', (e) => {
@@ -83,14 +86,12 @@ form.addEventListener('submit', (e) => {
                 formView.style.display = 'none';
                 successView.classList.add('show');
             } else {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'wyślij wiadomość';
-                alert('Coś poszło nie tak. Napisz bezpośrednio na mail@alanmyszka.pl');
+                formView.style.display = 'none';
+                errorView.classList.add('show');
             }
         })
         .catch(() => {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'wyślij wiadomość';
-            alert('Błąd połączenia. Napisz bezpośrednio na mail@alanmyszka.pl');
+            formView.style.display = 'none';
+            errorView.classList.add('show');
         });
 });
