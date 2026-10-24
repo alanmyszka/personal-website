@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+# OpenPGP public key for verifying this file's signature:
+# https://alanmyszka.pl/.well-known/pgp-key.txt
+Contact: mailto:security@alanmyszka.pl
+Expires: 2027-09-30T22:00:00.000Z
+Preferred-Languages: en, pl
+Canonical: https://alanmyszka.pl/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEkgkjqUgj7SGgqIsn8HHbIJ9RKX0FAmrcjnMACgkQ8HHbIJ9R
+KX2f3g//Th1nJ/A/kdRyt9+fyyMjgZr9kJ+Myo8mejB/AKuPycy8lLZOl7dorOk7
+GsqTHN6XO1IQ9rP2YIhJwRQYQwfYLKSED+XHgiAzVOV0DYTm9lfiHxnWwwWgUO6A
+vjCujwkTU3Z2q6Q+44qr7WMan/vRubE0q0Klb+KXKPMDCsJMSsdef4Ctg0y4oFdp
+7WugDyq6yh8wpDFitexwFXkpXDy5zkVwhbqEpceskpxBR14TEWuCPaQ9/6WRiIJ+
+yhIzYhWxlFveiWt3SlUntkqEENiaZCwKlwJuLtK/8IaoaQ0lLN81A0ofVf9Z9Z8X
+7iGwfXHqoS4SUm9JZ1xJWPllFLJ21f0rsbQ1Quq5S1E1bGeCVnj1YJNVrxH++7SA
+x6lNW/IA5IfMomwsHilY42DwAkVJLKYbRhelQChdCWHMT/ZrSdePQgFMQrSsflUM
+iU/pxKbrPlmlHkhQvjzS67Dn1mQUy17KWZKjW/xQaKejEdYkAaidjDVebHvtoVRw
+1ZtmX0v5dVm/EOHFarCJmtulXR5i5kn6/ZB3TOYnGEcIG4vPCKId+W++qQBtY6BO
+j2zgU4A+5tSGg4n3VO5IOFH26XH5tHDdwxzYt7lkbuj09To3Nxy2kFWdSqj6D9R3
+b/RQDUV3w8RJOGvJZzXNELla6IazixSPEWeeh8TluvPr79PtndI=
+=piPm
+-----END PGP SIGNATURE-----
